@@ -1,0 +1,28 @@
+.flex-center{
+    display: flex;
+    align-items: center;
+}
+.flex{
+    display: flex;
+}
+.margin-10{
+    margin: 10px;
+}
+.mat-mdc-form-field {
+    width: 200px;
+}
+.no-border{
+    border: none;
+    .mdc-notched-outline__leading{
+        border: none;
+    }
+    .mdc-notched-outline__trailing{
+        border: none;
+    }
+    .mdc-notched-outline__notch{
+        border: none;
+    }
+    .mat-mdc-form-field-infix{
+        border: none;
+    }
+}

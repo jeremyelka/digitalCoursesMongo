@@ -1,0 +1,43 @@
+<div class="container margin-top-xl pt-5">
+    <div class=" py-5">
+        <mat-form-field appearance="outline">
+            <mat-label>Search</mat-label>
+            <input [(ngModel)]="searchText" matInput placeholder="Placeholder">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+    </div>
+</div>
+<section class="container">
+    <div class="row">  
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th *ngFor="let key of keys" scope="col">{{key}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of alldata | filter:'courseTitle':searchText;index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{data.courseTitle}}</td>
+                    <td>{{data.courseDate | date : 'dd/MM/yyyy'}}</td>
+                    <td>{{data.cost}}</td>
+                    <td>{{data.isActive}}</td>
+                  </tr>
+                </tbody>
+            </table> 
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row"> 
+        <button class="btn btn-secondary w-auto" (click)="toggleOpen()">
+            Add Course
+        </button> 
+        <app-add-course  (eventToParent)="getEventFromChild($event)" *ngIf="addCourseShow"></app-add-course>
+    </div>
+</div>
+
+

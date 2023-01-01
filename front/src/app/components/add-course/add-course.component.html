@@ -1,0 +1,13 @@
+<form class="row mt-4 flex-center" #myform [formGroup]="courseForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+    <formly-form
+          [form]="courseForm"
+          [model]="courseModel"
+          [fields]="coursefields">
+    </formly-form>
+    <div class="col-md-3 flex">
+        <button type="submit" class="btn btn-primary w-auto" [disabled]="!courseForm.valid">
+            Save Course
+        </button>
+    </div>
+</form>
+    
