@@ -1,11 +1,9 @@
 import { Component, ElementRef, OnInit, Output, ViewChild, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
 import { EventEmitter } from '@angular/core';
-import { MatDatepicker } from '@angular/material/datepicker';
 import {CourseModel} from 'src/app/models/course.model';
 import { FormlyFieldConfig } from '@ngx-formly/core';
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-add-course',
@@ -17,10 +15,6 @@ export class AddCourseComponent{
 
 @Output() eventToParent = new EventEmitter();
 
-dateValidator(control: FormControl) {
-  return /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(control.value) ? null : { 'courseDate': true };
-}
-
 courseModel? : CourseModel;
 courseForm = new FormGroup({});
 coursefields: FormlyFieldConfig[]= [
@@ -29,6 +23,7 @@ coursefields: FormlyFieldConfig[]= [
     type: 'input',
     className: 'margin-10',
     props: {
+      label:'Course Title',
       placeholder: 'Course Title',
       required: true,
     },
@@ -36,17 +31,19 @@ coursefields: FormlyFieldConfig[]= [
   {
     key: 'courseDate',
     type: 'datepicker',
-    className: 'margin-10',
+    className: 'margin-10 nobutton',
     props: {
+      label:'Course Date',
       placeholder: 'Course Date',
       required: true,
-    },
+    }
   },
   {
     key: 'cost',
     type: 'number',
     className: 'margin-10',
     props: {
+      label:'Cost',
       placeholder: 'Cost',
       required: true,
     },
@@ -62,9 +59,6 @@ coursefields: FormlyFieldConfig[]= [
   },
 ]
 
-@ViewChild('picker')
-datePicker!: MatDatepicker<Date>;
-
 constructor(private apiService:ApiService){}
 
 onSubmit(){
@@ -75,13 +69,6 @@ onSubmit(){
         this.courseForm.reset();
       }
     });
-  }
-}
-
-openPicker(){
-  console.log(this.datePicker);
-  if(this.datePicker){
-    this.datePicker.open();
   }
 }
 

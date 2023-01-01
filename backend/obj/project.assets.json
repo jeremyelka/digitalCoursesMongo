@@ -674,11 +674,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\97252\\Documents\\digitalTask\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\97252\\Documents\\digitalTask - Copy\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\97252\\Documents\\digitalTask\\backend\\backend.csproj",
+      "projectPath": "C:\\Users\\97252\\Documents\\digitalTask - Copy\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\97252\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\97252\\Documents\\digitalTask\\backend\\obj\\",
+      "outputPath": "C:\\Users\\97252\\Documents\\digitalTask - Copy\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\97252\\AppData\\Roaming\\NuGet\\NuGet.Config"

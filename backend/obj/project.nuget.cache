@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fhyRUVyrNv6F9bqAxhZHntI1eLRB98e98RbwxPqZeieVXS0nEns36EaU9W4dWu3FXBDoQAp3Mg3FzS1SlX9DQg==",
+  "dgSpecHash": "MAwIni6ESigiQ5ukYNGQtRlsvAvdpWc/y40p/X+wtzcAZUFOeNj0nfAhguPYvFQzdlq/q5N5BU5QI8ZPgq41zA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\97252\\Documents\\digitalTask\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\97252\\Documents\\digitalTask - Copy\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\97252\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\97252\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
